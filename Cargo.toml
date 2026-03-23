@@ -1,0 +1,47 @@
+[package]
+name = "rs-stop-words-print"
+version = "0.1.0"
+edition = "2024"
+
+exclude = [
+]
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[lints.clippy]
+unwrap_used = "deny"
+expect_used = "deny"
+panic = "deny"
+
+[profile.release-wasi]
+inherits = "release"
+lto = true
+strip = true
+opt-level = 's'
+codegen-units = 1
+
+[dependencies.clap]
+version = "4"
+default-features = false
+features = [
+    "std",
+    "derive",
+    "help",
+    "usage",
+]
+
+[dependencies.stop-words]
+version = "0.10"
+default-features = false
+features = [
+    "iso",
+]
+
+[dependencies.phf]
+version = "0.13"
+default-features = false
+features = [
+    "std",
+    "macros",
+]
