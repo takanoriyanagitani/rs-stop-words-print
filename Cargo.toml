@@ -3,7 +3,16 @@ name = "rs-stop-words-print"
 version = "0.1.0"
 edition = "2024"
 
+description = "Prints the stop words for the language."
+license = "Apache-2.0"
+repository = "https://github.com/takanoriyanagitani/rs-stop-words-print"
+homepage = "https://github.com/takanoriyanagitani/rs-stop-words-print"
+documentation = "https://docs.rs/rs-stop-words-print/latest"
+keywords = ["stop-words", "wasi"]
+
 exclude = [
+  "rs-stop-words-print.wasm",
+  "opt.wasm",
 ]
 
 [lints.rust]
